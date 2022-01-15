@@ -32,8 +32,8 @@ router.get('/doujindesuSearch', async (req, res) => {
 })
 router.get('/nhentaipdf', async (req, res) => {
 	var code = req.query.code
-	var nhres = `https://api-lusifartest.herokuapp.com/nsfw/nhcode?query=${code}`
-	var nhread = `https://api-lusifartest.herokuapp.com/nsfw/nhread?query=${code}`
+	var nhres = `http://www.lusifar-api.tk/nsfw/nhcode?query=${code}`
+	var nhread = `http://www.lusifar-api.tk/nsfw/nhread?query=${code}`
 	res.json({
 		pdf: nhres,
 		read: nhread,
@@ -43,7 +43,7 @@ router.get('/nhentaipdf', async (req, res) => {
 router.get('/nhcode', async (req, res) => {
         try {
 	var query = req.query.query
-	let data = await axios.get('https://api-lusifartest.herokuapp.com/nsfw/nHentai?code='+query)
+	let data = await axios.get('http://www.lusifar-api.tk/nsfw/nHentai?code='+query)
     	let restjson = data.data.result.pages
 	let title = data.data.result.title
     	let duckJson = await restjson.map(a => 'https://external-content.duckduckgo.com/iu/?u=' + a)
@@ -58,7 +58,7 @@ router.get('/nhcode', async (req, res) => {
 })
 router.get('/nhread', async(req, res) => {
 	var query = req.query.query
-	let data = await axios.get('https://api-lusifartest.herokuapp.com/nsfw/nHentai?code='+query)
+	let data = await axios.get('http://www.lusifar-api.tk/nsfw/nHentai?code='+query)
 	let restjson = data.data.result.pages
 	let title = data.data.result.title
 	let duckJson = await restjson.map(a => 'https://external-content.duckduckgo.com/iu/?u=' + a)

@@ -121,7 +121,7 @@ async function tiktokHastag(query) {
 						usernameNick: ch('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.user-nickname').text(),
 						username: ch('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.username').text(),
 						description: ch('#tiktok-video-result > div > div.result > div:nth-child(2) > p').text(),
-						nowm: 'https://api-lusifartest.herokuapp.com/downloader/tiktoknowm?link='+ch('#tiktok-video-result > div > div.download-buttons > div > a').attr('href').replace('https://savetiknowm.org/?tiktok_url=', ''),
+						nowm: 'http://www.lusifar-api.tk/downloader/tiktoknowm?link='+ch('#tiktok-video-result > div > div.download-buttons > div > a').attr('href').replace('https://savetiknowm.org/?tiktok_url=', ''),
 						original: ch('#tiktok-video-result > div > div.download-buttons > a').attr('href')
 					})
 				})

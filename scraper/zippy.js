@@ -22,7 +22,7 @@ async function zippy(Url) {
 						if (decrypt) {
 							_url = url.parse(Url).hostname + eval(decrypt)
 							_url = _url.startsWith('http') ? _url : 'http://' + _url
-							const url_final = 'https://api-lusifartest.herokuapp.com/converter/toFile?url='+_url
+							const url_final = 'http://www.lusifar-api.tk/converter/toFile?url='+_url
 							result.url = url_final
 						}
 					}

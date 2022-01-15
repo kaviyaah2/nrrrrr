@@ -51,8 +51,8 @@ var fullUrl = await fetch(url)
 const tiktok = await tiktok_scrape.getVideoMeta(fullUrl.url, {headers})
 const ingfo = tiktok.collector[0]
 const tiktok_dl = await musicaldown(url)
-const titoko = `https://api-lusifartest.herokuapp.com/downloader/tiktoknowm?link=${url}`
-const tikitoko = `https://api-lusifartest.herokuapp.com/converter/tomp3?url=https://api-lusifartest.herokuapp.com/downloader/tiktoknowm?link=${url}`
+const titoko = `http://www.lusifar-api.tk/downloader/tiktoknowm?link=${url}`
+const tikitoko = `http://www.lusifar-api.tk/converter/tomp3?url=http://www.lusifar-api.tk/downloader/tiktoknowm?link=${url}`
 const obj = {
 	videoInfo: {
 		id: ingfo.id,
